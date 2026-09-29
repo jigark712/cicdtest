@@ -8,7 +8,7 @@ A minimal app and CI pipeline for teaching CI/CD.
 - `tests/` — pytest unit tests  
 - `Dockerfile` — builds container image  
 - `deploy.sh` — simulates deployment (prints environment + SHA)  
-- `.github/workflows/ci-template.yml` — GitHub Actions workflow (unit tests, build, publish artifact, simulated deploy)  
+- `.github/workflows/ci-template.yml` — GitHub Actions workflow (unit tests, build, push image tagged with commit SHA, simulated deploy)
 - `requirements.txt`
 
 ## Student tasks
@@ -22,7 +22,7 @@ A minimal app and CI pipeline for teaching CI/CD.
 Install dependencies:
 
 ```bash
-pip install -r requirements.txt
+pip install -r app/requirements.txt
 ```
 
 Run the app:
@@ -41,3 +41,5 @@ pytest -q
 
 - The workflow demonstrates CI steps: test, build, publish artifact, and a simulated deploy.  
 - `deploy.sh` only prints environment information and commit SHA to simulate deployment.
+
+_Lab run by jigark712._
